@@ -1,0 +1,88 @@
+/* Add these styles to your global CSS file */
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+  .MuiContainer-root {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .MuiTypography-h4 {
+    font-size: 1.8rem !important;
+  }
+}
+
+/* Dropzone styling */
+.dropzone {
+  padding: 20px;
+  border: 2px dashed #eeeeee;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #bdbdbd;
+  outline: none;
+  transition: border 0.24s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropzone.active {
+  border-color: #2196f3;
+}
+
+.dropzone.accept {
+  border-color: #00e676;
+}
+
+.dropzone.reject {
+  border-color: #ff1744;
+}
+
+/* Result card animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MuiPaper-root {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Progress bar styling */
+.MuiLinearProgress-root {
+  border-radius: 5px;
+  height: 10px;
+}
+
+/* List item styling */
+.MuiListItem-root {
+  padding-left: 0 !important;
+}
+
+.MuiListItemText-primary {
+  font-size: 0.9rem !important;
+}
+
+/* Button hover effect */
+.MuiButton-contained {
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+
+.MuiButton-contained:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
