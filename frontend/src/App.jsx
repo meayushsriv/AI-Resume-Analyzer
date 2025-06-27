@@ -56,14 +56,13 @@ function App() {
         formData.append("file", file);
         formData.append("jobDescription", jobDescription);
 
-        const API_BASE = import.meta.env.VITE_BACKEND_URL
-          ? "/api"
-          : "http://localhost:3000";
-
-        const response = await fetch(`${API_BASE}/analyze`, {
-          method: "POST",
-          body: formData,
-        });
+        const response = await fetch(
+          `${import.meta.env.VITE_BACKEND_URL}/analyze`,
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
 
         if (!response.ok) {
           throw new Error(`Failed to process ${file.name}`);
